@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>		Day 4	</title>
+	<script src = "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<style>
+		@import url("css/fourth.css");
+	</style>
+	<script type="text/javascript">
+		$(startup);
+
+		var data = [
+			"<h3 align=center>Google Chrome</h3><hr><p>Google Chrome is a freeware web browser developed by Google</p>",
+			"<h3 align=center>Mozilla Firefox</h3><hr><p>Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation</p>",
+			"<h3 align=center>Internet Explorer</h3><hr><p>Internet Explorer is a series of graphical web browsers developed by Microsoft</p>"
+		];
+
+		function startup(){
+			debugger;
+			hideall();
+			$('#chromeBtn').click({picid: $('#chrome')},show);
+			$('#firefoxBtn').click({picid: $('#firefox')},show);
+			$('#explorerBtn').click({picid: $('#explorer')},show);
+			$("#chrome").click({tag: data[0]},reveal);			//earlier: click.({tag:"static message"},reveal)
+			$("#firefox").click({tag: data[1]},reveal);			// but later we made its onject of data
+			$("#explorer").click({tag: data[2]},reveal);
+			$("#info").click(reveal);
+		}
+		var pic;			//earlier: pic was local to reveal, but in order to use it in show as well
+
+		function hideall(){
+			$('img').hide(1000).css("left","20px");
+			$('#info').hide();
+		}
+
+		function show(event){
+			hideall();
+			pic = event.data.picid;
+			pic.show(1000).animate("left","100px");
+		}
+
+		function reveal(event){
+			pic.slideToggle();	//earlier: $('this').slideUp();
+			$('#info').fadeToggle(1000);	//earlier fadeIn(1000)
+			$('#info').html(event.data.tag);	//earlier: with static data: html("<h2>"+event.data.tag+"</h2>");
+
+		}
+	</script>
+</head>
+<body>
+	<button id="chromeBtn">Chrome</button>
+	<button id="firefoxBtn">Firefox</button>
+	<BUTTON id="explorerBtn">Explorer</BUTTON><br>
+	<img id="chrome" src="images/fourth/chrome.jpg">
+	<img id="firefox" src="images/fourth/firefox.jpg">
+	<img id="explorer" src="images/fourth/ie.jpg">
+	<div id="info"> </div>
+</body>
+</html>
+
+<!-- 
+		<table>
+			<tr>
+				<td align="center"><button id="chrome">Chrome</button></td>
+				<td align="center"><button id="firefox">Firefox</button></td>
+				<td align="center"><button id="explorer">Explorer</button></td>
+			</tr>
+			<tr>
+				<td><img src="images/fourth/chrome.jpg"></td>
+				<td><img src="images/fourth/firefox.jpg"></td>
+				<td><img src="images/fourth/ie.jpg"></td>
+			</tr>		
+		</table>
+ -->

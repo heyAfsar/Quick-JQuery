@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Start</title>
+
+	<!-- 
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	 -->
+	 
+	<style type="text/css">
+		@import url("css/styles.css");
+	</style>
+	
+	<script src = "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+
+		$(startup);
+
+		function startup(){
+			$('#gates').click(showGates);
+			$('#jobs').click(showJobs);
+			$('img').hover(makered)
+		}
+
+		function makered(){
+			$(this).toggleClass('redbox');
+		}
+
+		function showGates(){
+			$('#data').empty();	//remove()
+			$('#data').append("<h2> Bill Gates </h2><p>William Henry Gates III<sup>rd is a co-founder of the Microsoft Corporation and is an American business magnate, investor, author and philanthropist. In 1975, Gates and Paul Allen launched Microsoft, which became the world's largest PC software company</p>");	
+			//val(), text(), html() overrites the value
+			//$('#data').load("doc/gates.txt");
+			//window.alert("You Clicked On Gates");	
+		}
+
+		function showJobs(){
+			$('#data').html("<h2> Steve Jobs</h2><p>Steven Paul Jobs was an American entrepreneur, businessman, inventor, and industrial designer. Jobs was the chairman, and the chief executive officer, and a co-founder of Apple Inc.</p>");
+			//$('#data').load("doc/jobs.txt");
+			//window.alert("You Clicked On Jobs");
+
+		}
+
+	</script>
+</head>
+<body>
+	<h2 align="center">Click, Load and Hover Example</h2>
+	<img id = "gates" src="images/gates.jpg">
+	<img id = "jobs" src="images/jobs.jpg">
+	<div id = "data"></div>
+</body>
+</html>

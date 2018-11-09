@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Start</title>
+	<script src = "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		
+//first : intorduction to  $(document).ready() //dom is ready & document tree has been parsed
+
+			//$(document).ready(window.alert("hello"));
+			
+			/*$(document).ready(function(){
+				window.alert("hello");
+			});*/
+		
+//second : passing function to $() , acts like $(document).ready()
+			
+			$(startup);	// $ == jQuery, works as $(document).ready();
+
+			function startup(){
+		    // window.alert("I've been called from function startup");
+
+//  third : addressing tags, classes and id's or a grp of things
+		  	//  $('p').hide();	//will hide all the paragraphs	
+		 					//show(): shows everything
+		  	//  $('p').fadeOut(3000);	//fade everything away in 3 seconds
+									// fadeIn(3000) : will get everything back on screen in 3 seconds 
+			}
+
+		
+		 
+			/*$(startup);
+			function startup(){
+				$('p').css("color","red");
+				$('#blue').css('color','blue');
+				$('.green').css('color','black');
+			}*/
+
+			/*$(start);
+		function start(){
+			$("button.btn").click(function(){
+				$("button.btn").html("clicked");
+			});
+		}*/
+	</script>
+</head>
+<body>
+<!-- 		<button class="btn">change</button> -->
+		 <!-- third -->
+		<!-- 
+			<p class = 'green'>this is para 1</p>
+			<p >this is para 2</p>
+			<p class = 'green'>this is para 3</p>
+			<p id = 'blue'>this is para 4</p>		   -->
+		
+
+</body>
+</html>

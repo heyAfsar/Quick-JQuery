@@ -1,0 +1,19 @@
+img{
+	border: 2px solid black;
+	height: 368px;
+	width: 236px;
+	margin-right: 40px;
+	float: left;
+}
+
+#gates{
+	margin-left: 30px;
+}
+#data{
+	float: left;
+	width: 620px;
+	height: 368px;
+}
+.redbox{
+	border: 2px solid red;
+}

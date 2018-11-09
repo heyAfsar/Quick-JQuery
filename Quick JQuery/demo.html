@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src = "https://code.jquery.com/jquery-3.2.1.min.js">
+	</script>
+	<script>
+		$(fun);
+		function fun(){
+			var $foreach = $("li:contains('random')");
+
+			$foreach.each(doit);
+
+			function doit(){
+				debugger;
+                $(this).css('color','blue');
+                var x = $(this).append('added later');
+                $(x).css('color','red');
+                //$(this).append('added later').css('color','red');        // can also be done in a single line
+			    }
+			}
+
+
+	</script>	
+</head>
+<body>
+	<h3>This Module Deals With Selectors in JQuery</h3>
+
+        <p>This Is My 1<sup>st Paragraph</p>
+        <UL id = topli>
+                <li>This is item 0 random text</li>
+                <li>This is item 1</li>
+                <li>This is item 2</li>
+                <li>This is item 3</li>
+                <li>random text this is item 4</li>
+                <li>This is item 5</li>
+                <li>This is item 6</li>
+                <li>This is item 7</li>
+        </UL>
+        <p>This Is My 2<sup>nd paragraph</p>
+        <UL>
+                <li>This is item 8</li>
+                <li>This is item 9</li>
+                <li>This random text is item 10</li>
+                <li>This is item 11</li>
+                <li>This is item 12</li>
+                <li>This is random text item 13</li>
+                <li>This is item 14</li>
+        </UL>           
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+			/*(function(x, f = () => x) {
+				console.log(x);
+				console.log( f = () => x);
+			  var x;
+			  	console.log(x);
+			  var y = x;
+			  	 console.log(y);
+			  x = 2;
+			  	 console.log(x);
+			  return [x, y, f()];
+			})(3);*/
+
+			var arr = [ ];
+			console.log(arr);
+			for (var { x = 2, y } of [{ x: 1 }, 2, { y }]) { 
+				console.log(arr);
+				console.log(x);
+				console.log(y);
+			  arr.push(x, y);
+			  console.log(arr);
+			}
+			arr;
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Start</title>
+	<script src = "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		$(startup);
+		function startup(){
+			//$('li:even').css('background','tan')	//similar with li:odd
+			//$('li:gt(4)').fadeOut('slow');	//can also assign numbers in miliseconds to fadeOut();
+			//$('li:eq(3),li:eq(8)').css('background','tan');	//eq() helps us select 
+			//$('#topli').css('color','red')
+			//$('#topli li').fadeOut('slow');	//li's that are the part of #topli id will get affected
+			//$("li:contains('random text')").css('color','red');	// text search using contains() function
+			
+			/*	//second task	: contains, and not
+			var filter = $("li:contains('random text')");	
+			$(filter).hide(3000);	
+			var $other = $("li:contains('random text')");	//careate a jquery var
+			$other.show(3000);								//directly execute item		*/
+
+			/* //opposite of then above task
+			var item = $("li:contains('random')");
+			$('li').not($(item)).hide();	//items that dosn't have 'random' word will be hidden using the method not()
+			*/
+
+				//third task : each() and append() selector functions
+			/*var $foreach = $("li:contains('random')");
+			$foreach.each(doit);
+
+			function doit(){
+				$(this).css('color','blue');
+				var x = $(this).append('added later');
+				$(x).css('color','red');
+				//$(this).append('added later').css('color','red');	// can also be done in a single line
+			}	*/
+
+				//forth : changing selective word's css
+			
+
+
+		}
+	</script>
+</head>
+<body>
+	<h3>This Module Deals With Selectors in JQuery</h3>
+
+	<p>This Is My 1<sup>st Paragraph</p>
+	<UL id = topli>
+		<li>This is item 0 random text</li>
+		<li>This is item 1</li>
+		<li>This is item 2</li>
+		<li>This is item 3</li>
+		<li>random text this is item 4</li>
+		<li>This is item 5</li>
+		<li>This is item 6</li>
+		<li>This is item 7</li>
+	</UL>
+	<p>This Is My 2<sup>nd paragraph</p>
+	<UL>
+		<li>This is item 8</li>
+		<li>This is item 9</li>
+		<li>This random text is item 10</li>
+		<li>This is item 11</li>
+		<li>This is item 12</li>
+		<li>This is random text item 13</li>
+		<li>This is item 14</li>
+	</UL>
+</body>
+</html>
